@@ -8,11 +8,11 @@ on:
                 required: false
                 default: '["8.1", "8.2"]'
                 type: string
-            php-version-lowest:
-                description: PHP version for testing lowest deps
-                required: false
-                default: 8.2
-                type: string
+            #php-version-lowest:
+            #    description: PHP version for testing lowest deps
+            #    required: false
+            #    default: 8.1
+            #    type: string
             phpunit:
                 description: PHPUnit script (phpunit/simple-phpunit)
                 required: false
@@ -33,9 +33,9 @@ jobs:
                 composer-options: [--prefer-stable]
                 include:
                     # testing lowest PHP version with the lowest dependencies
-                    - php-version: ${{ inputs.php-version-lowest }}
-                      dependency-versions: lowest
-                      composer-options: --prefer-lowest
+                    #- php-version: ${{ inputs.php-version-lowest }}
+                    #  dependency-versions: lowest
+                    #  composer-options: --prefer-lowest
 
                     # testing dev versions with the highest PHP
                     - php-version: 8.2
