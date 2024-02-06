@@ -24,4 +24,4 @@ jobs:
                   tools: php-cs-fixer
 
             - name: Run PHP-CS-Fixer
-              run: php-cs-fixer fix --dry-run --diff
+              run: php-cs-fixer fix --dry-run --diff --verbose
